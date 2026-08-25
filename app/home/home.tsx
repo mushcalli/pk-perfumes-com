@@ -1,17 +1,24 @@
-import type { Route } from "./+types/home";
+import Banner from "~/components/banner";
+import Navbar from "~/components/navbar";
 
-import background from "/app/assets/home/background.png";
-
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "PK Perfumes" },
-    { name: "description", content: "Welcome to PK Perfumes!" },
-  ];
-}
+import background from "~/assets/home/background.png";
 
 export default function Home() {
-  return <div className="h-screen" style={{
-    backgroundImage: "url(" + background + ")"
-    }}>
-  </div>;
+	return <div>
+		<title>Home - PK Perfumes</title>
+		<meta property="og:title" content="Home - PK Perfumes" />
+
+		<div className="h-[400vh] bg-size-[300vw_auto] md:bg-contain bg-repeat-y" style={{
+			backgroundImage: "url(" + background + ")"
+		}}>
+			<div className="absolute fixed w-screen">
+				<Banner></Banner>
+				<Navbar></Navbar>
+			</div>
+
+			<div className="flex flex-col items-center">
+				<p className="top-0 text-white text-2x">sdgdfg</p>
+			</div>
+		</div>
+	</div>;
 }

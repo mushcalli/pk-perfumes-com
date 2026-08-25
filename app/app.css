@@ -1,15 +1,56 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'Resagokr';
+    src: url('/fonts/ResagokrLight.woff2') format('woff2'),
+        url('/fonts/ResagokrLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Resagokr';
+    src: url('/fonts/Resagokr.woff2') format('woff2'),
+        url('/fonts/Resagokr.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Resagokr';
+    src: url('/fonts/ResagokrBold.woff2') format('woff2'),
+        url('/fonts/ResagokrBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	
+	/*--color-scrollbar-track: rgba();
+	--color-scrollbar-thumb: rgba();*/
 }
 
 html,
 body {
-  @apply bg-white;
+	@apply bg-white;
 
-  /* @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  } */
+	scrollbar-width: thin;
+	/*scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);*/
+
+	/* @media (prefers-color-scheme: dark) {
+		color-scheme: dark;
+	} */
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
