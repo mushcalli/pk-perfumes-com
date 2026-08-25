@@ -16,10 +16,10 @@ export default function Navbar() {
             <DropdownMenu.Portal>
                 
                 <DropdownMenu.Content sideOffset={-37}>
-                    <div className="bg-contain h-[85vh] aspect-[403/1080]"  style={{
+                    <div className="bg-contain h-screen aspect-[403/1080]"  style={{
                         backgroundImage: "url(" + menuBackground + ")"
                     }}>
-                        <div className="mt-0 m-2 mr-11 flex flex-col gap-3 place-content-start">
+                        <div className="mt-0 m-2 mr-[6vh] flex flex-col gap-1 sm:gap-3 place-content-start">
                             <div className="mt-10">
                                 <DropdownMenu.Item>
                                     <a href="/">
