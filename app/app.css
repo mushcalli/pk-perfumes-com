@@ -33,24 +33,51 @@
 	--color-scrollbar-thumb: rgba();*/
 }
 
-html,
-body {
-	@apply bg-white;
+@layer base {
+    html,
+    body {
+        @apply bg-white;
 
-	scrollbar-width: thin;
-	/*scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);*/
+        mask-clip: view-box;
 
-	/* @media (prefers-color-scheme: dark) {
-		color-scheme: dark;
-	} */
-}
+        scrollbar-width: thin;
+        /*scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);*/
 
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+        /* @media (prefers-color-scheme: dark) {
+            color-scheme: dark;
+        } */
+
+        img {
+            min-width: none;
+        }
+
+        /* ///// embla carousel ///// */
+        .embla__viewport {
+            overflow: hidden;
+        }
+        .embla__container {
+            display: flex;
+            touch-action: pan-y pinch-zoom;
+        }
+        .embla__slide {
+            flex: 0 0 100%;
+            min-width: 0;
+        }
+        .embla__dot {
+            opacity: 0.5;
+        }
+        .embla__dot--selected {
+            opacity: 1;
+        }
+    }
+
+    .visually-hidden {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
 }

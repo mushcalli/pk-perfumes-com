@@ -1,18 +1,12 @@
 let images = {};
 
-export default function Banner({imagePool = "normal"}) {
-	switch (imagePool) {
-		default:
-			images = import.meta.glob("~/assets/img/banners/*.jpg");
-			break;
-	}
-
-	let len = Object.keys(images).length;
+export default function Banner({ images }: { images: string[] }) {
+	let len = images.length;
 	let i = Math.floor(Math.random() * len);
-	let img = "";
-	for (const path in images) {
+	let source = "";
+	for (const path of images) {
 		if (i <= 0) {
-			img = path;
+			source = path;
 			break;
 		}
 
@@ -20,6 +14,6 @@ export default function Banner({imagePool = "normal"}) {
 	}
 
 	return <div className="top-0">
-		<img className="object-cover h-[8rem] w-svw sm:h-auto" src={img}></img>
+		<img className="object-cover h-[8rem] w-svw sm:h-auto" src={source}></img>
 	</div>;
 }
