@@ -3,9 +3,9 @@ import background from "~/assets/home/background.png";
 import Banner from "~/components/banner";
 import Navbar from "~/components/navbar";
 
-export default function PriveCollection() {
-    let bannerImages = Object.keys(import.meta.glob("~/assets/banners/*.jpg"));
+const bannerImages = Object.values(import.meta.glob("~/assets/banners/test/*.webp", { eager: true, query: "?url", import: "default" }));
 
+export default function PriveCollection() {
     return (<div>
 		<title>Prive Collection - PK Perfumes</title>
 		<meta property="og:title" content="Prive Collection - PK Perfumes" />

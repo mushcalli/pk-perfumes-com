@@ -13,10 +13,10 @@ import Banner from "~/components/banner";
 import Navbar from "~/components/navbar";
 import EmblaCarousel from "~/components/emblacarousel";
 
-export default function Home() {
-	let bannerImages = Object.keys(import.meta.glob("~/assets/banners/test/*.webp"));
-	let carouselImages = Object.keys(import.meta.glob("~/assets/home/quotes-slideshow/*.jpg"));
+const bannerImages = Object.values(import.meta.glob("~/assets/banners/test/*.webp", { eager: true, query: "?url", import: "default" }));
+const carouselImages = Object.values(import.meta.glob("~/assets/home/quotes-slideshow/*.jpg", { eager: true, query: "?url", import: "default" }));
 
+export default function Home() {
 	return (<div>
 		<title>Home - PK Perfumes</title>
 		<meta property="og:title" content="Home - PK Perfumes" />
