@@ -14,7 +14,7 @@ import Navbar from "~/components/navbar";
 import EmblaCarousel from "~/components/emblacarousel";
 
 export default function Home() {
-	let bannerImages = Object.keys(import.meta.glob("~/assets/banners/*.jpg"));
+	let bannerImages = Object.keys(import.meta.glob("~/assets/banners/test/*.webp"));
 	let carouselImages = Object.keys(import.meta.glob("~/assets/home/quotes-slideshow/*.jpg"));
 
 	return (<div>
@@ -58,7 +58,7 @@ export default function Home() {
 				</p>
 				<div className="my-10 mx-5 sm:mx-15 xl:my-40 xl:mx-40 flex flex-col sm:flex-row gap-4 sm:gap-10 xl:gap-25">
 					<img className="aspect-square min-w-0 h-full" src={portrait}></img>
-					<p className="text-sm sm:max-w-[40svw] lg:text-2xl text-gray-300 font-[Resagokr] font-bold">
+					<p className="text-sm sm:max-w-[40svw] lg:text-2xl xl:text-5xl text-gray-300 font-[Resagokr] font-bold">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque, libero ut tincidunt vulputate, magna mi tincidunt felis,
 						quis vulputate lorem odio non nisi. Nunc euismod nec nulla eu auctor. Praesent nulla ipsum, tincidunt id dui semper, iaculis gravida
 						lorem. Vestibulum dictum eget lectus ac porttitor. Aenean et vulputate orci. In in cursus turpis, eu dignissim augue. Duis dapibus

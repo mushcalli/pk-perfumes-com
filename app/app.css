@@ -49,6 +49,7 @@
 
         img {
             min-width: none;
+            image-rendering: smooth;
         }
 
         /* ///// embla carousel ///// */
