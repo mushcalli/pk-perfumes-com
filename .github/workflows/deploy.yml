@@ -30,7 +30,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7 # v7
         with:
-          clean: 'false'
+          clean: false
       - name: Set up Node
         uses: actions/setup-node@v7 # v7
         with:
