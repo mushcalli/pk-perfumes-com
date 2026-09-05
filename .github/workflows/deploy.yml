@@ -37,7 +37,7 @@ jobs:
           node-version: lts/*
           cache: 'npm'
       - name: Install dependencies
-        run: cd pk-perfumes-com/pk-perfumes-com
+        run: cd pk-perfumes-com/pk-perfumes-com |
           npm ci
       - name: Build
         run: npm run build
