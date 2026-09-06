@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router";
 import { DropdownMenu } from "radix-ui";
+import { preload } from "react-dom";
 
 import menuButton from "~/assets/PK Menu button-2.jpg";
 import menuBackground from "~/assets/Menu Bar background.webp"
@@ -9,6 +10,8 @@ import menuCross from "~/assets/Orange Cross Plus sign.png"
 export default function Navbar() {
     const [open, setOpen] = useState<boolean>(false);
     const [visible, setVisible] = useState<boolean>(true);
+
+    preload(menuBackground);
 
     return <div className="w-fit">
         <DropdownMenu.Root modal={false} onOpenChange={(open: boolean) => setVisible(!open)}>
