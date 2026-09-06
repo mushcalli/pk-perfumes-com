@@ -12,6 +12,7 @@ import horses from "~/assets/home/Elmer Yazzie Horses.png";
 import Banner from "~/components/banner";
 import Navbar from "~/components/navbar";
 import EmblaCarousel from "~/components/emblacarousel";
+import { Link } from "react-router";
 
 const bannerImages = Object.values(import.meta.glob("~/assets/banners/test/*.webp", { eager: true, query: "?url", import: "default" }));
 const carouselImages = Object.values(import.meta.glob("~/assets/home/quotes-slideshow/*.jpg", { eager: true, query: "?url", import: "default" }));
@@ -68,15 +69,15 @@ export default function Home() {
 				<img className="mx-20 mb-10 md:mb-20 md:mx-100 min-w-0" src={bar3}></img>
 				<p className="text-center text-2xl xl:text-6xl text-gray-300 font-[Resagokr] font-bold">Shop for your Fragrances</p>
 				<div className="my-6 mx-5 sm:mx-15 xl:my-20 xl:mx-40 flex flex-row place-content-center gap-4 xl:gap-20">
-					<a className="aspect-square min-w-0 h-full" href="/asia-collection">
+					<Link className="aspect-square min-w-0 h-full" to="/asia-collection">
 						<img src={collection1}></img>
-					</a>
-					<a className="aspect-square min-w-0 h-full" href="/prive-collection">
+					</Link>
+					<Link className="aspect-square min-w-0 h-full" to="/prive-collection">
 						<img src={collection2}></img>
-					</a>
-					<a className="aspect-square min-w-0 h-full" href="/signature-collection">
+					</Link>
+					<Link className="aspect-square min-w-0 h-full" to="/signature-collection">
 						<img src={collection3}></img>
-					</a>
+					</Link>
 				</div>
 				<img className="mx-20 my-10 md:mx-80 md:my-40 min-w-0" src={horses}></img>
 			</div>
