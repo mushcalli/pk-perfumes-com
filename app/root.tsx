@@ -36,7 +36,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
 			<head>
-				<base href="/"></base>
+				<base href="/pk-perfumes-com/"></base>
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<Meta />
