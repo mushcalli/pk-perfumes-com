@@ -2,7 +2,7 @@
   "name": "pk-perfumes-com",
   "private": true,
   "type": "module",
-  "homepage": "{https://mushcalli.github.io/pk-perfumes-com/}",
+  "homepage": "https://mushcalli.github.io/pk-perfumes-com/",
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
