@@ -36,9 +36,10 @@ jobs:
         with:
           node-version: lts/*
           cache: 'npm'
+      - name: pain and suffering and pain and suffering and pain and suffering and pain and sufferingW
+        run: ls -R
       - name: Install dependencies
-        run: ls -la |
-          npm ci
+        run: npm ci
       - name: Build
         run: npm run build
       - name: Setup Pages
